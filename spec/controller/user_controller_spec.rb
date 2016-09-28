@@ -5,7 +5,7 @@ RSpec.describe UsersController, type: :controller do
     @user = create(:user)
   end
 
-  describe "should error when no method present" do
+  describe "should show error when no method present" do
 
     it "should show index" do
       get :index
@@ -40,6 +40,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "should delete" do
+      binding.pry
       params={id: @user.id}
       delete :destroy, params: params
 

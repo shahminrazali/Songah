@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root to: "web#index"
   resources :users
+  resources :sessions
 end
