@@ -1,0 +1,20 @@
+<!--  start header  -->
+<header>
+  <div class="wrapper">
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", class:"logo" %>
+    <% end %>
+
+    <nav>
+      <ul>
+        <li><%= link_to "About", about_path %><li>
+        <li><%= link_to "Services", service_path %><li>
+        <li><%= link_to "Work", work_path %><li>
+        <li><%= link_to "Register", new_user_path %><li>
+        <li><%= link_to "Login" %></li>
+        <li><%= link_to "Contact", contact_path %><li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--  end header  -->
