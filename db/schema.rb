@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20160928043642) do
+=======
 
 ActiveRecord::Schema.define(version: 20160927051048) do
 
 
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +35,16 @@ ActiveRecord::Schema.define(version: 20160927051048) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
+<<<<<<< HEAD
+    t.string   "password"
+    t.date     "date_of_birth"
+    t.string   "name"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "password_digest"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_at"
+=======
     t.string   "username"
     t.string   "password_digest"
     t.string   "password_reset_token"
@@ -44,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160927051048) do
     t.integer  "role",                 default: 0
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+>>>>>>> master
   end
 
 end
