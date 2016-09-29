@@ -10,8 +10,13 @@
         <li><%= link_to "About", about_path %><li>
         <li><%= link_to "Services", service_path %><li>
         <li><%= link_to "Work", work_path %><li>
-        <li><%= link_to "Register", new_user_path %><li>
-        <li><%= link_to "Login" %></li>
+          <%= if current_user %>
+            <li><%=link_to "#{@user.username}" %></li>
+            <li><%=link_to "Logout" %></li>
+          <%= else %>
+            <li><%= link_to "Register", new_user_path %><li>
+            <li><%= link_to "Login" %></li>
+          <%=end%>
         <li><%= link_to "Contact", contact_path %><li>
       </ul>
     </nav>
