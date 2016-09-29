@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get :work, to: 'static_pages#work'
   get :work_details, to: 'static_pages#work_details'
   resources :users, only: [:new, :edit, :create, :update]
+  resources :sessions, only: [:new, :create, :destroy]
 
   match 'auth/:provider/callback', to: 'omniauth#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
