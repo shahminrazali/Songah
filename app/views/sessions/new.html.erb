@@ -1,0 +1,12 @@
+<div class="users">
+  <div class="page-container">
+    <div class="background-khai">
+      <h1 class="whitefont"> Login </h1>
+        <%= form_for(:user, url: sessions_path, method: :post) do |f| %>
+        <%= f.email_field :email, required: true, id: "user_email_field", class: 'email', placeholder: "Email" %>
+        <%= f.password_field :password, required: true, id: "user_password_field", class: 'password', placeholder: "Password" %>
+        <%= f.submit "Login", class: "btn btn-default button2" %>
+      <% end %>
+    </div>
+  </div>
+</div>
