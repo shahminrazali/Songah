@@ -40,7 +40,6 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "should delete" do
-      binding.pry
       params={id: @user.id}
       delete :destroy, params: params
 
