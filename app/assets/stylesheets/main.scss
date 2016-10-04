@@ -30,11 +30,6 @@
 /*  Fonts  */
 @font-face {
     font-family: 'raleway-regular';
-    src: url('../fonts/raleway-regular.eot');
-    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-regular.woff') format('woff'),
-         url('../fonts/raleway-regular.ttf') format('truetype'),
-         url('../fonts/raleway-regular.svg#RalewayRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -43,11 +38,6 @@
 
 @font-face {
     font-family: 'raleway-semibold';
-    src: url('../fonts/raleway-semibold.eot');
-    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-semibold.woff') format('woff'),
-         url('../fonts/raleway-semibold.ttf') format('truetype'),
-         url('../fonts/raleway-semibold.svg#RalewaySemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -428,7 +418,7 @@ header ul li .current{
     display: inline-block;
     width: 13px;
     height: 9px;
-    background: url('../img/more_icon.png') no-repeat;
+    background: url('../assets/more_icon.png') no-repeat;
     background-position: 0 0;
     margin-left: 3px;
 
@@ -668,7 +658,7 @@ header ul li .current{
     float: right;
     padding: 0;
     margin: 40px 0 0 0;
-    background: #fbfafa url('../img/process_separator.png');
+    background: #fbfafa url('../assets/process_separator.png');
     background-position: 0 0;
     background-repeat: repeat-x;
     border: 0!important;

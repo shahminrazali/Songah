@@ -1,32 +1,30 @@
-<!-- Begin Playlist -->
-<div id="player-container">
-  <!-- <div class="information">
-    Playlist
-    <hr>
-  </div>
-  <div class="amplitude-song-container amplitude-play-pause playlist-item" amplitude-song-index="0">
-    <img src="images/theweatherman.jpg" class="album-art"/>
-    <div class="playlist-meta">
-      <div class="now-playing-title">Living Proof</div>
-      <div class="album-information">Gregory Alan Isakov - The Weatherman</span></div>
-    </div>
-    <div style="clear: both;"></div>
-  </div>
-  <div class="amplitude-song-container amplitude-play-pause playlist-item" amplitude-song-index="1">
-    <img src="images/roomsforadelaide.jpg" class="album-art"/>
-    <div class="playlist-meta">
-      <div class="now-playing-title">Rooms</div>
-      <div class="album-information">Mia and Jonah - Rooms For Adelaide</span></div>
-    </div>
-    <div style="clear: both;"></div>
-  </div>
-  <div class="amplitude-song-container amplitude-play-pause playlist-item" amplitude-song-index="2">
-    <img src="images/thesuburbs.jpeg" class="album-art"/>
-    <div class="playlist-meta">
-      <div class="now-playing-title">Suburban War</div>
-      <div class="album-information">The Arcade Fire - The Suburbs</span></div>
-    </div>
-    <div style="clear: both;"></div>
-  </div> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Amazing HTML5 Audio Player, powered by http://amazingaudioplayer.com</title>
+
+    <!-- Insert to your webpage before the </head> -->
+    <script src="assets/jquery.js"></script>
+    <script src="assets/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/initaudioplayer-1.css">
+    <script src="assets/musicplayer.js"></script>
+    <!-- End of head section HTML codes -->
+
+</head>
+<body>
+<div style="margin:12px auto;">
+
+    <!-- Insert to your webpage where you want to display the audio player -->
+    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:300px;height:300px;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="Khai" data-title="lightup" data-album="" data-info="" data-image="assets/song.jpg" data-duration="0">
+                <div class="amazingaudioplayer-source" data-src="<%= audio_path('lightup.mp3')%>" data-type="audio/mpeg" />
+            </li>
+        </ul>
+    <!-- End of body section HTML codes -->
+
 </div>
-<!-- End Playlist -->
+</body>
+</html>
