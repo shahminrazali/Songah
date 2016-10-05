@@ -11,7 +11,6 @@ class PlaylistController < ApplicationController
     if @song == []
 
      date_find(date)
-     binding.pry
     end
   end
 
