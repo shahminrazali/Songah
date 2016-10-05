@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :playlists
+
+  enum role: ['user', 'admin']
+  has_secure_password(validations: false)
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
@@ -13,10 +17,6 @@ class User < ApplicationRecord
     end
   end
 
-  has_many :orders
-
-  enum role: ['user', 'admin']
-  has_secure_password(validations: false)
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
