@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
 
   resources :sessions
-  resources :playlist, only: [:index]
-  get :view, to: 'playlist#view'
-  get :song_search, to: 'playlist#song_search'
+  resources :playlist
+  resources :playlist_item
+  resources :song
+  get :song_search, to: 'song#song_search'
 
 
   root to: "landing#index"
