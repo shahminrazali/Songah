@@ -30,11 +30,6 @@
 /*  Fonts  */
 @font-face {
     font-family: 'raleway-regular';
-    src: url('../fonts/raleway-regular.eot');
-    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-regular.woff') format('woff'),
-         url('../fonts/raleway-regular.ttf') format('truetype'),
-         url('../fonts/raleway-regular.svg#RalewayRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -43,11 +38,6 @@
 
 @font-face {
     font-family: 'raleway-semibold';
-    src: url('../fonts/raleway-semibold.eot');
-    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-semibold.woff') format('woff'),
-         url('../fonts/raleway-semibold.ttf') format('truetype'),
-         url('../fonts/raleway-semibold.svg#RalewaySemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -151,8 +141,10 @@ header ul li .current{
     color: #fc884f;
 }
 
-
-
+.headerfont {
+  font-family: "Montserrat";
+  color:salmon;
+}
 
 
 
@@ -166,8 +158,6 @@ header ul li .current{
     width: 100%;
     height: 600px;
     position: relative;
-     background-image: asset-url("hero.jpg");
-
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -239,29 +229,33 @@ header ul li .current{
 /*  titles  */
 .page_title{
     width: 100%;
-    padding: 100px 0;
-    background: #fdfcfc;
+    padding: 120px 0;
+    background: black;
     text-align: center;
 }
 
 .page_title .title{
-    color: #414751;
-    font-family: "raleway-semibold", arial;
+    color: white;
+    font-family: "Indie Flower";
     font-weight: bold;
-    font-size: 22px;
+    font-size: 40px;
 }
 
 .work .title,
 .team .title,
 .process .title,
 .contact_form .title{
-    color: #414751;
-    font-family: "raleway-semibold", arial;
+    color: white;
+    font-family: "Indie Flower";
     font-weight: bold;
-    font-size: 22px;
+    font-size: 40px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 100px;
+    padding: 80px;
+}
+
+.contactcolor{
+  background-color: aqua;
 }
 
 
@@ -428,7 +422,7 @@ header ul li .current{
     display: inline-block;
     width: 13px;
     height: 9px;
-    background: url('../img/more_icon.png') no-repeat;
+    background: url('../assets/more_icon.png') no-repeat;
     background-position: 0 0;
     margin-left: 3px;
 
@@ -457,7 +451,7 @@ header ul li .current{
     color: #fff;
     font-family: "raleway-regular", arial;
     font-size: 14px;
-    background: #fb874f;
+    background: #2f9442;
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -668,7 +662,7 @@ header ul li .current{
     float: right;
     padding: 0;
     margin: 40px 0 0 0;
-    background: #fbfafa url('../img/process_separator.png');
+    background: #fbfafa url('../assets/process_separator.png');
     background-position: 0 0;
     background-repeat: repeat-x;
     border: 0!important;
@@ -791,7 +785,7 @@ header ul li .current{
 }
 
 .contact_form .form .submit{
-    background: #fb874f;
+    background: green;
     padding: 30px 40px;
     border: 0!important;
     margin-top: 50px;
@@ -962,4 +956,82 @@ footer ul.social li{
 
 footer ul.social li:last-child{
     margin-right: 0;
+}
+
+video {
+  position: relative;
+  z-index: -1;
+}
+
+#custom-message {
+  position: relative;
+  z-index:1;
+  top: -730px;
+  font-family: "Amatic SC";
+  right: 300px;
+  font-size: 90px;
+  color: #fff;
+  width: 100%;
+  line-height: 0;
+  height: 90px;
+}
+
+.intro {
+  position: relative;
+  z-index:1;
+  top: -640px;
+  font-family: "Indie Flower";
+  right: 300px;
+  font-size: 35px;
+  color: #fff;
+  width: 100%;
+  line-height: 0;
+}
+
+.line {
+  position: relative;
+  z-index:1;
+  top: -720px;
+  font-family: "Amatic SC";
+  right: 350px;
+  font-size: 90px;
+  color: #fff;
+  width: 100%;
+  line-height: 0;
+}
+
+.arrow {
+  position: relative;
+  z-index:1;
+  top: -720px;
+  right: 130px;
+  font-size: 90px;
+  color: #fff;
+  width: 100%;
+  line-height: 0;
+}
+
+.click2 {
+  position: relative;
+  z-index:1;
+  top: -520px;
+  right: 300px;
+  font-size: 90px;
+  color: #fff;
+  width: 100%;
+  line-height: 0;
+}
+
+.contacticons {
+  color: #fff;
+  top: -200px;
+  position: relative;
+  padding: 80px;
+
+}
+
+.bgblack{
+  background:black;
+  z-index: -1;
+  position: relative;
 }
