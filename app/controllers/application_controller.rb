@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  helper_method :current_playlist
 
   private
 
@@ -8,6 +9,12 @@ class ApplicationController < ActionController::Base
      @current_user ||= User.find_by(id: session[:id])
     end
     helper_method :current_user 
+  end
+
+  def current_playlist
+
+      @current_playlist = Playlist.find(1)
+
   end
 
   def authenticate!

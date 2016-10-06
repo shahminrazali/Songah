@@ -1,10 +1,16 @@
 class PlaylistController < ApplicationController
 
   def index
+    @playlist = Playlist.new
+  end
+
+  def new
   end
 
   def create
-    @playlist = Playlist.create(playlist_params)
+    @playlist = Playlist.new(playlist_params)
+    @playlist.save
+    redirect_to root_path
   end
 
   private

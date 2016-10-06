@@ -10,8 +10,9 @@ RSpec.describe PlaylistItemController, type: :controller do
       params = {playlist_item: {playlist_id: 1, song_id: 1}}
 
       post :create, params: params
-
       expect(PlaylistItem.count).to eql(1)
+      expect(PlaylistItem.first.song_id).to eql(1)
+
     end
   end
 end
