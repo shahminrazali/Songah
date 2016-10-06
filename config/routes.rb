@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 
-  resources :users
   resources :sessions
+  resources :playlist
+  resources :playlist_item
+  resources :song
+  get :song_search, to: 'song#song_search'
 
 
   root to: "landing#index"

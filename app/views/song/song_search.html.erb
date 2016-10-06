@@ -1,0 +1,9 @@
+<div class ="song">
+  <%@song.each do |s| %>
+    <%= s.title %> -
+    <%= s.artist %>
+    <br>
+  <% end %>
+<%= button_to "Add to playlist", add_to_playlist_path(song_id: @song.ids), class: "btn btn-default button2"%>
+
+</div>

@@ -13,26 +13,25 @@
   <%=a.name%>
   <br>
 <%end%>
+
 <h4>PLAYLISTS</h4>
 <%@playlists.each do |a|%>
   <%=a.name%>
   <br>
 <%end%>
+
 <h4>ALBUMS</h4>
 <%@albums.each do |a|%>
-
-
   <%=a.name%>
   <iframe src="https://embed.spotify.com/?uri=<%=a.uri%>&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-
   <br>
 <%end%>
+
 <h4>TRACKS</h4>
 <%@tracks.each do |a|%>
-<iframe src="https://embed.spotify.com/?uri=<%=a.uri%>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://embed.spotify.com/?uri=<%=a.uri%>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
   <%=a.name%>
   <br>
 <%end%>
-
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3album%30eFHYz8NmK75zSplL5qlfM&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
