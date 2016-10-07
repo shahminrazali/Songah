@@ -103,25 +103,25 @@ h5, h6          { font-weight: bolder }
 /*  header  */
 header{
     width: 100%;
-    height: 160px;
+    height: 80px;
     background: white;
 }
 
 header .logo{
     float: left;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 header nav{
     float: right;
-    margin-top: 75px;
+    margin-top: 35px;
 }
 
 header ul li{
     list-style: none;
     display: block;
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 header ul li a{
@@ -451,7 +451,7 @@ header ul li .current{
     color: #fff;
     font-family: "raleway-regular", arial;
     font-size: 14px;
-    background: #2f9442;
+    background: #234c2b;
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -966,7 +966,7 @@ video {
 #custom-message {
   position: relative;
   z-index:1;
-  top: -730px;
+  top: -610px;
   font-family: "Amatic SC";
   right: 300px;
   font-size: 90px;
@@ -979,7 +979,7 @@ video {
 .intro {
   position: relative;
   z-index:1;
-  top: -640px;
+  top: -560px;
   font-family: "Indie Flower";
   right: 300px;
   font-size: 35px;
@@ -991,7 +991,7 @@ video {
 .line {
   position: relative;
   z-index:1;
-  top: -720px;
+  top: -640px;
   font-family: "Amatic SC";
   right: 350px;
   font-size: 90px;
@@ -1003,7 +1003,7 @@ video {
 .arrow {
   position: relative;
   z-index:1;
-  top: -720px;
+  top: -640px;
   right: 130px;
   font-size: 90px;
   color: #fff;
@@ -1014,7 +1014,7 @@ video {
 .click2 {
   position: relative;
   z-index:1;
-  top: -520px;
+  top: -470px;
   right: 300px;
   font-size: 90px;
   color: #fff;
