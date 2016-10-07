@@ -1,4 +1,4 @@
-<div class="users">
+<!-- <div class="users">
   <div class="page-container">
     <div class="background-khai">
       <h1 class="whitefont"> Create Playlist </h1>
@@ -9,4 +9,60 @@
       <% end %>
     </div>
   </div>
+</div> -->
+
+<section class="parent1">
+  <div class="child1">
+    Users Playlist listed here
+    <table>
+    <%@user_playlist.each do |p|%>
+    <tr>
+      <td>
+        <%=p.playlist_name%><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <%=p.user_id%><br>
+    </td>
+  </tr>
+    <%end%>
+  </table>
+  </div>
+  <div class="child1">
+    The songs from playlist listed here <br>
+    <table>
+    <%@playlist_items.each do |p|%>
+    <tr>
+      <td>
+        <%=p.song_id%><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <%=p.playlist_id%><br>
+    </td>
+  </tr>
+    <%end%>
+  </table>
+  </div>
+
 </div>
+<div class="child1">
+  The songs from playlist listed here <br>
+  <table>
+  <%@songs.each do |p|%>
+  <tr>
+    <td>
+      Title: <%=p.title%><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Artist: <%=p.artist%><br>
+  </td>
+</tr>
+  <%end%>
+</table>
+</div>
+</section>

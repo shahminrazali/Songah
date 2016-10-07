@@ -1,0 +1,37 @@
+.parent {
+  display: flex; /* or inline-flex */
+}
+
+.child {
+  flex-grow: 1 2; /* default 0 */
+}
+
+.line-parent{
+  display:flex;
+  background-color: white;
+  height: 50vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-child{
+  flex: 1 0 200px;
+  margin: auto;
+}
+
+.parent1{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin:  auto;
+  justify-content:space-around;
+  height: 500px;
+  border-width: thick;
+}
+
+.child1{
+  flex: 0 0 300px;
+  margin: 30px 0;
+  color: maroon;
+    border-width: thick;
+}
