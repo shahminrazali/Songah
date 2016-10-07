@@ -1,8 +1,10 @@
 class PlaylistController < ApplicationController
+  before_action :authenticate!, only: [:index, :create, :switch, :update, :new, :destroy]
 
   def index
     @playlist = Playlist.new
     @playlists = Playlist.where(user_id: current_user.id)
+
   end
 
   def new
@@ -15,11 +17,14 @@ class PlaylistController < ApplicationController
   end
 
   def switch
-    # @current_playlist = params[:id]
     @current = Playlist.find_by(id: params[:id])
     cookies[:current] = @current.id
-    binding.pry
     redirect_to root_path
+  end
+
+  def destroy
+    @playlist = Playlist.find_by(id: params[:id])
+    @playlist.destroy
   end
 
   private

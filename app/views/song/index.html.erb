@@ -1,4 +1,13 @@
-<%=form_for(:song_search, url: song_search_path, method: :get, html: { id: "item-show-form" }) do |f| %>
-  <%= f.date_field :date, id: "date_field", class: 'date', placeholder: "YYYY-MM-DD" %>
-  <%= f.submit "Search", class: "btn btn-default button2" %>
-<%end%>
+<div class="users">
+  <div class="page-container">
+    <div class="background-khai">
+      <h1 class="whitefont"> Enter Date: </h1>
+
+      <%=form_for(:song_search, url: song_search_path, method: :get, html: { id: "item-show-form" }) do |f| %>
+        <%= f.date_field :date, id: "date_field", class: 'date', placeholder: "YYYY-MM-DD" %>
+        <%= f.submit "Search", class: "btn btn-default button2" %>
+      <%end%>
+
+    </div>
+  </div>
+</div>

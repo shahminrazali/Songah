@@ -19,6 +19,8 @@ gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1.7'
 gem 'omniauth-spotify'
 gem 'rspotify'
+gem 'pundit'
+gem 'responders'
 
 
 group :development, :test do
