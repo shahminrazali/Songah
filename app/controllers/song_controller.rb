@@ -4,6 +4,8 @@ class SongController < ApplicationController
   end
 
   def song_search
+    @playlist =  Playlist.all
+    @playlist_item = PlaylistItem.new
     date = song_params[:date]
     @song = []
     @song = Song.search(date)

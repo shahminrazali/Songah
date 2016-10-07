@@ -1,9 +1,9 @@
 class PlaylistItemController < ApplicationController
 
   def create
-    @playlist_item = PlaylistItem.create(playlist_items_params)
+    @current = get_current
+    @playlist_item = PlaylistItem.create(playlist_items_params.merge(playlist_id: @current.to_i))
   end
-
 
 
 private

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :playlist_item
   resources :song
   get :song_search, to: 'song#song_search'
+  post :switch, to: 'playlist#switch'
 
 
   root to: "landing#index"
