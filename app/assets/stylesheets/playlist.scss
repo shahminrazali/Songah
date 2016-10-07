@@ -25,13 +25,16 @@
   max-width: 1200px;
   margin:  auto;
   justify-content:space-around;
-  height: 500px;
+  height: 100%;
   border-width: thick;
+  border-color:black;
 }
 
 .child1{
   flex: 0 0 300px;
   margin: 30px 0;
   color: maroon;
-    border-width: thick;
+  border-style: dotted;
+  border-width: thick;
+    border-color:black;
 }

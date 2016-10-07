@@ -1,4 +1,4 @@
-<!-- <div class="users">
+<div class="users">
   <div class="page-container">
     <div class="background-khai">
       <h1 class="whitefont"> Create Playlist </h1>
@@ -8,7 +8,7 @@
       <% end %>
     </div>
   </div>
-</div> -->
+</div>
 
 <section class="parent1">
   <div class="child1">
@@ -60,6 +60,14 @@
     <td>
     Artist: <%=p.artist%><br>
   </td>
+</tr>
+<tr>
+  <td vertical-align="middle">
+      <iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="700" height="80" frameborder="0" allowtransparency="true"></iframe>
+      <%=fa_icon "minus 1x"%>
+      <i vertical-align="middle" class="fa fa-minus" aria-hidden="true"></i>
+
+</td>
 </tr>
   <%end%>
 </table>
