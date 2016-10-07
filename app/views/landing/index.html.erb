@@ -27,7 +27,8 @@
           </button>
         </div>
       </div>
-      <div id="custom-message" style="top:-200px">
+      <%= image_tag "fulllogo.png" %>
+      <div id="custom-message" style="top:-480px">
         Connect with us :
       </div>
       <div class ="facebook">
@@ -39,136 +40,14 @@
     </div>
   </div>
 
-
-
-
-	<!--  start services section  -->
-	<section class="services_home" style="background:black">
-		<div class="wrapper">
-      <hr>
-			<ul>
-				<li>
-					<br>
-          <h1>Rnim minim veniaisi</h1>
-					<p>Aute irure dolor in reprehenderit intor voluptate velit esse cillum dolore euro fugiat nulla pariatur excepteur sintary occaecat cupidatat proident.</p>
-				</li>
-				<li>
-          <br>
-					<h1>Integer rhoncus libero</h1>
-					<p>Aute irure dolor in reprehenderit intor voluptate velit esse cillum dolore euro fugiat nulla pariatur excepteur sintary occaecat cupidatat proident.</p>
-				</li>
-				<li>
-          <br>
-					<h1>magna vitae diaculis</h1>
-					<p>Aute irure dolor in reprehenderit intor voluptate velit esse cillum dolore euro fugiat nulla pariatur excepteur sintary occaecat cupidatat proident.</p>
-				</li>
-			</ul>
-		</div>
-	</section>
-	<!--  end services section  -->
-
-
-
-	<!--  start projects section  -->
 	<section class="work clearfix", style="background: black">
 		<div class="wrapper">
       <hr>
       <div class="titleattribute">
-			<h2 class="title">Our Work</h2>
+        <div class="songah">
+			<h2 class="title">Thank You</h2>
       <hr>
       </div>
-
-			<article class="project1">
-				<div class="media">
-					<a href="#"><%= image_tag "project1.jpg" %></a>
-				</div>
-				<div class="details">
-					<a href="work_details.html">
-						<h1>Excepteur occaecat cupidatat</h1>
-					</a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</p>
-					<a href="work_details.html" class="link_details">details <span class="details_icon"></span></a>
-				</div>
-			</article>
-			<article class="project2">
-				<div class="media">
-					<a href="#">
-            <%= image_tag"project2.jpg" %>
-          </a>
-				</div>
-				<div class="details">
-					<a href="work_details.html">
-						<h1>Excepteur occaecat cupidatat</h1>
-					</a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ...</p>
-					<a href="work_details.html" class="link_details">details <span class="details_icon"></span></a>
-				</div>
-			</article>
-			<div class="more_projects">
-				<a href="#" class="all_work">More Projects</a>
-			</div>
+    </div>
 		</div>
 	</section>
-	<!--  end projects section  -->
-
-	<!--  start clients section  -->
-	<section class="clients" style="background:black">
-		<div class="wrapper">
-			<ul>
-				<li><%= image_tag "google.png" %></li>
-				<li><%= image_tag "facebook.png" %></li>
-				<li><%= image_tag "yahoo.png" %></li>
-				<li><%= image_tag "paypal.png" %></li>
-			</ul>
-		</div>
-	</section>
-	<!--  end clients section  -->
-  <script>
-  $(document).ready(function(){
-
-    //show and hide the home page video
-
-    $('.play_video').click(function(e){
-      e.preventDefault();
-
-      var video_link = $(this).data('video');
-      video_link = '<iframe src="' + video_link + '" width="500" height="208" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-
-      $('.about_video').append(video_link).fadeIn(200);
-    });
-
-
-    $('.close_video').click(function(e){
-      e.preventDefault();
-
-      $('.about_video').fadeOut(200,function(){
-        $('iframe', this).remove();
-      });
-
-    });
-
-
-
-
-    $('.play_video').click(function(e){
-      e.preventDefault();
-
-      var video_link = $(this).data('video');
-      video_link = '<iframe src="' + video_link + '" width="500" height="208" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-
-      $('.about_video').append(video_link).fadeIn(200);
-    });
-
-
-    $('.close_video').click(function(e){
-      e.preventDefault();
-
-      $('.about_video').fadeOut(200,function(){
-        $('iframe', this).remove();
-      });
-
-    });
-
-
-  });
-  </script>
