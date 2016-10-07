@@ -59,4 +59,4 @@ function containerFunctions() {
   });
 }
 
-$(document).on('turbolinks:load', containerFunctions)
+$(document).on('ready', containerFunctions)

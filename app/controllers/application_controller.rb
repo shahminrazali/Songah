@@ -17,9 +17,11 @@ class ApplicationController < ActionController::Base
 
   end
 
+  include CurrentUserHelper
+
   def authenticate!
     unless current_user
       redirect_to root_path
-      flash[:danger] = "You need to login first"
     end
   end
+end

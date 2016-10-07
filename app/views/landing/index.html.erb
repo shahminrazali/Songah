@@ -1,23 +1,47 @@
+  <div id="container" align="center">
+    <div class= "bgblack">
+      <!-- <video width="1480" height="1000" autoplay>
+        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"/>
+      </video> -->
+        <iframe title="YouTube video player" width="1480" height="1000" src="https://www.youtube.com/embed/b6vSf0cA9qY?autoplay=1&cc_load_policy=1" frameborder="0"></iframe>
+      <div id="custom-message">Welcome to</div>
+      <div id="custom-message">SongAh</div>
+      <div class="line">
+        . . . . . . . . . . . . .
+      </div>
+      <div class="arrow">
+        <%= image_tag "next.png" %>
+      </div>
+      <div class="intro">
+        Build your perfect Spotify
+      </div>
+      <div class="intro" style="top:-570px">
+        playlist with us
+      </div>
+      <div class="click2">
+        <div class="sessions">
+          <button name="commit" value="Login" data-disabled-with="login">
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div id="custom-message" style="top:-200px">
+        Connect with us :
+      </div>
+      <div class ="facebook">
+        <%= fa_icon 'facebook-official 5x', class: 'contacticons' %>
+        <%= fa_icon 'instagram 5x', class: 'contacticons' %>
+        <%= fa_icon 'twitter 5x', class: 'contacticons' %>
+        <%= fa_icon 'spotify 5x', class: 'contacticons' %>
+      </div>
+    </div>
+  </div>
 
-
-	<!--  start hero section  -->
-	<section class="hero">
-
-		<a href class="play_video" data-video="http://www.youtube.com/embed/Bm3NV3gGB2w?autoplay=1&showinfo=0">
-			<%= image_tag "play_btn.png" %>
-		</a>
-		<h2 class="caption">About SongAh</h2>
-		<div class="about_video show_video">
-			<a href="" class="close_video">Close</a>
-		</div>
-
-	</section>
-	<!--  end hero section  -->
 
 
 
 	<!--  start services section  -->
-	<section class="services_home">
+	<section class="services_home" style="background:floralwhite">
 		<div class="wrapper">
 			<ul>
 				<li>
@@ -40,11 +64,14 @@
 
 
 	<!--  start projects section  -->
-	<section class="work clearfix">
+	<section class="work clearfix", style="background: black">
 		<div class="wrapper">
+      <br>
+      <div class="titleattribute">
 			<h2 class="title">Our Work</h2>
+      </div>
 
-			<article class="project1">
+			<article class="project1", style="background: lightsalmon">
 				<div class="media">
 					<a href="#"><%= image_tag "project1.jpg" %></a>
 				</div>
@@ -56,7 +83,7 @@
 					<a href="work_details.html" class="link_details">details <span class="details_icon"></span></a>
 				</div>
 			</article>
-			<article class="project2">
+			<article class="project2", style="background: lightblue">
 				<div class="media">
 					<a href="#">
             <%= image_tag"project2.jpg" %>

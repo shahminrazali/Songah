@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get :service, to: 'static_pages#service'
   get :work, to: 'static_pages#work'
   get :work_details, to: 'static_pages#work_details'
+  get :player, to: "player#index"
   resources :users, only: [:new, :edit, :create, :update]
+  resources :sessions, only: [:new, :create, :destroy]
 
   resources :chart, only: [:index]
   resources :spotify, only: [:index]
@@ -24,4 +26,5 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback', to: 'omniauth#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'omniauth#destroy', as: 'signout', via: [:get, :post]
+
 end
