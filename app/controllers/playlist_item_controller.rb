@@ -2,6 +2,7 @@ class PlaylistItemController < ApplicationController
 
   def create
     @playlist_item = PlaylistItem.create(playlist_items_params)
+    binding.pry
   end
 
 

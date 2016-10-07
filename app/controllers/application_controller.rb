@@ -12,9 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_playlist
-
-      @current_playlist = Playlist.find(1)
-
+      @current_playlist = Playlist.find_by(user_id: current_user.id)
   end
 
   include CurrentUserHelper
@@ -24,4 +22,3 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
-end

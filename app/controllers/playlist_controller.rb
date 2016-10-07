@@ -9,6 +9,7 @@ class PlaylistController < ApplicationController
 
   def create
     @playlist = Playlist.new(playlist_params)
+    binding.pry
     @playlist.save
     redirect_to root_path
   end
