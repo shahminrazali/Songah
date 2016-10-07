@@ -5,7 +5,6 @@ class PlaylistItemController < ApplicationController
   end
 
 
-
 private
 
   def playlist_items_params
