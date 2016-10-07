@@ -8,14 +8,12 @@ Rails.application.routes.draw do
 
   get :search, to: 'auto#search'
   get :song_search, to: 'song#song_search'
+  post :switch, to: 'playlist#switch'
 
 
   root to: "landing#index"
   get :about, to: 'static_pages#about'
   get :contact, to: 'static_pages#contact'
-  get :service, to: 'static_pages#service'
-  get :work, to: 'static_pages#work'
-  get :work_details, to: 'static_pages#work_details'
   get :player, to: "player#index"
   get :select_playlist, to: "playlist#select_playlist"
 

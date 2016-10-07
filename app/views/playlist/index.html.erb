@@ -2,10 +2,16 @@
   <div class="page-container">
     <div class="background-khai">
       <h1 class="whitefont"> Create Playlist </h1>
-      <%= form_for(@playlist, url: playlist_index_path, method: :post, html: { id: "user-create-form" }) do |f| %>
+
+      <%= form_for(:playlist, url: playlist_index_path, method: :post, html: { id: "user-create-form" }) do |f| %>
         <%= f.text_field :playlist_name, required: true, id: "playlist_name_field", class: 'username', placeholder: "Playlist Name" %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.submit "Create Playlist", class: "btn btn-default button2" %>
       <% end %>
+
+      <% @playlists.each do |f|%>
+        <%=link_to f.playlist_name ,switch_path(id: f.id) , method: :post %>
+      <%end%>
     </div>
   </div>
 </div>

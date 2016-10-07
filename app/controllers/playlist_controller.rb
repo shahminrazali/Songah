@@ -9,6 +9,7 @@ class PlaylistController < ApplicationController
 
   def select_playlist
     @playlist_items = PlaylistItem.where(playlist_id: Playlist.find(params[playlist_id]))
+    @playlists = Playlist.where(user_id: current_user.id)
   end
 
   def new
@@ -20,10 +21,23 @@ class PlaylistController < ApplicationController
     redirect_to root_path
   end
 
+  def switch
+    # @current_playlist = params[:id]
+    @current = Playlist.find_by(id: params[:id])
+    cookies[:current] = @current.id
+    binding.pry
+    redirect_to root_path
+  end
+
   private
 
     def playlist_params
       params.require(:playlist).permit(:user_id, :playlist_name)
+    end
+
+
+    def set_current
+      cookies[:current] = @current.id
     end
 
 
