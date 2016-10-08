@@ -1,32 +1,39 @@
 .musicplayer{
   *, *:before, *:after {
-    box-sizing: border-box;
   }
 
   html {
     height: 100%;
   }
 
-  h1 {
-  font-family: 'Pattaya', sans-serif;
-  color: #7d2a2a;
-  font-size:18px;
-  padding-top: 150px;
+  .playerspace {
+    padding:150px;
   }
 
-  h1:hover{
+  .player {
+  font-family: 'Pattaya', sans-serif;
+  color: #7d2a2a;
+  font-size:25px;
+  text-decoration:none;
+  }
+
+  .player:hover{
     color: antiquewhite;
   }
 
-  h2{
-    padding:20px;
+  .playlistname{
     color: white;
     font-family: "Indie Flower";
-    font-size: 25px;
+    font-size: 28px;
+    text-decoration:none;
   }
 
-  h2:hover {
+  .playlistname:hover {
     color: salmon;
+  }
+
+  .playlistspace{
+    padding:10px;
   }
 
   body {
@@ -62,6 +69,11 @@
   padding: 50px;
   background-image: url("playlistbg.jpg");
   border: solid white;
+  }
+
+  .margintop{
+    padding-top:200px;
+    font-family:"Pattaya";
   }
 
   .playlisttitle{
