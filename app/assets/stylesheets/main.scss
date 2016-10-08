@@ -262,14 +262,6 @@ header ul li .current{
 
 
 
-
-
-
-
-
-
-
-
 /*  services  */
 .services_home,
 .services{
@@ -587,6 +579,7 @@ header ul li .current{
     list-style: none;
     float: left;
     margin: 0 60px 60px 0;
+    padding: 38px;
 }
 
 .team ul li:nth-child(4n+0){
@@ -790,16 +783,15 @@ header ul li .current{
 .contact_form .form .email:focus,
 .contact_form .form .subject:focus,
 .contact_form .form .msg:focus{
-    border: 1px solid #fc884f;
+    border: 1px solid;
 
     transition: all .2s linear;
     -webkit-transition: all .2s linear;
 }
 
 .contact_form .form .submit{
-    background: green;
+    background: black;
     padding: 30px 40px;
-    border: 0!important;
     margin-top: 50px;
 
     color: #fff;
@@ -1054,4 +1046,10 @@ video {
 
 .paddingtop{
   padding-top: 60px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
