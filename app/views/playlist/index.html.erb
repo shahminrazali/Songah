@@ -2,18 +2,19 @@
 <div class="flexcontainer">
   <div class="musicplaylist">
     <div class="smallitem">
-      <h1>Playlists</h1>
+      <%= image_tag "playlist.jpg", class: "playlisttitle"%>
       <hr>
-      <h2 style="padding:15px">
+
 
 
       <%@user_playlist.each do |p|%>
-        <%=link_to p.playlist_name, playlist_index_path(playlist_id: p.id)%><br>
-
+            <h2>
+        <%=link_to p.playlist_name, playlist_index_path(playlist_id: p.id)%>
+            </h2>
       <%end%>
-      </h2>
-      <h2 style="padding:15px">Playlist B</h2>
-      <h1 style="padding-top:150px">Create a new playlist</h1>
+<br>
+
+      <h1><%=link_to "NEW PLAYLIST", new_playlist_path%></h1>
     </div>
   </div>
 
