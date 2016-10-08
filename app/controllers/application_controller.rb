@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   protect_from_forgery with: :exception
   helper_method :current_playlist
 
+  rescue_from Pundit::NotAuthorizedError do |exception|
+    flash[:danger] = "You're not authorized"
+    redirect_to request.referrer || root_path
+  end
 
   def current_playlist
     return unless
@@ -16,6 +21,7 @@ class ApplicationController < ActionController::Base
       @current = Playlist.where(user_id: current_user.id).last
     end
   end
+
 
   private
 

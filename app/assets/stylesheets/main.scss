@@ -104,12 +104,13 @@ h5, h6          { font-weight: bolder }
 header{
     width: 100%;
     height: 80px;
-    background: white;
+    background: black;
 }
 
 header .logo{
     float: left;
     margin-top: 20px;
+    height:45px;
 }
 
 header nav{
@@ -126,7 +127,7 @@ header ul li{
 
 header ul li a{
     text-decoration: none;
-    color: #414751;
+    color: white;
     font-family: "raleway-semibold", arial;
     font-weight: bold;
     font-size: 14px;
@@ -138,7 +139,8 @@ header ul li a{
 
 header ul li a:hover,
 header ul li .current{
-    color: #fc884f;
+    color: yellow;
+    border-bottom:1px solid yellow;
 }
 
 .headerfont {
@@ -304,8 +306,8 @@ header ul li .current{
 
 .services_home ul li h1,
 .services ul li h1{
-    color: #616771;
-    font-family: "raleway-semibold", arial;
+    color: lightgrey;
+    font-family: "Arial";
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
@@ -316,8 +318,8 @@ header ul li .current{
 .services_home ul li p,
 .services ul li p{
     color: #898d94;
-    font-family: "raleway-regular", arial;
-    font-size: 14px;
+    font-family: "Indie Flower";
+    font-size: 20px;
     line-height: 30px;
     letter-spacing: 1px;
 }
@@ -607,16 +609,17 @@ header ul li .current{
 }
 
 .team .team_name{
-    color: #414751;
+    color: antiquewhite;
     font-family: "raleway-semibold", arial;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 16px;
+    padding: 5px;
 }
 .team .team_job{
-    color: #fb874f;
+    color:#7d2a2a;
     font-family: "raleway-regular", arial;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 
@@ -653,6 +656,15 @@ header ul li .current{
 .process ul li .stages{
     width: 140px;
     float: left;
+}
+
+.stages {
+  padding:40px;
+  padding-bottom: 80px;
+  font-size: 40px;
+  color: grey;
+  font-family:"Pattaya";
+  border: solid;
 }
 
 .process ul li .process_sep{
@@ -1024,7 +1036,7 @@ video {
 
 .contacticons {
   color: #fff;
-  top: -200px;
+  top: -50px;
   position: relative;
   padding: 80px;
 
@@ -1034,4 +1046,12 @@ video {
   background:black;
   z-index: -1;
   position: relative;
+}
+
+.songah{
+  margin-bottom: 80px;
+}
+
+.paddingtop{
+  padding-top: 60px;
 }

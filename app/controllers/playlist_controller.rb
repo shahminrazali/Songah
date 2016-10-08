@@ -1,4 +1,5 @@
 class PlaylistController < ApplicationController
+  before_action :authenticate!, only: [:index, :create, :switch, :update, :new, :destroy]
 
   def index
     # binding.pry
@@ -32,6 +33,7 @@ class PlaylistController < ApplicationController
     # @playlist_items = PlaylistItem.where(playlist_id: params[:playlist_id])
     # @songs = Song.where(id: @playlist_items.each {|p| p.id})
     # redirect_to playlist_index_path(playlist_items: @playlist_items, songs: @songs)
+
   end
 
   def new
@@ -44,11 +46,14 @@ class PlaylistController < ApplicationController
   end
 
   def switch
-    # @current_playlist = params[:id]
     @current = Playlist.find_by(id: params[:id])
     cookies[:current] = @current.id
-    binding.pry
     redirect_to root_path
+  end
+
+  def destroy
+    @playlist = Playlist.find_by(id: params[:id])
+    @playlist.destroy
   end
 
   private

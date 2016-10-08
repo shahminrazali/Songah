@@ -11,6 +11,22 @@
   font-family: 'Pattaya', sans-serif;
   color: #7d2a2a;
   font-size:18px;
+  padding-top: 150px;
+  }
+
+  h1:hover{
+    color: antiquewhite;
+  }
+
+  h2{
+    padding:20px;
+    color: white;
+    font-family: "Indie Flower";
+    font-size: 25px;
+  }
+
+  h2:hover {
+    color: salmon;
   }
 
   body {
@@ -37,11 +53,20 @@
   .spotify-embeds {
     width: 100%;
     padding: 50px;
+    background: black;
+    border: solid white;
+    border-right-color:black;
   }
 
   .musicplaylist{
   padding: 50px;
-  background-image: url("next.png");
+  background-image: url("playlistbg.jpg");
+  border: solid white;
+  }
+
+  .playlisttitle{
+    height: 50px;
+    width: 200px;
   }
 
 

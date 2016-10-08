@@ -11,9 +11,9 @@ class SongController < ApplicationController
     @song = Song.search(date)
 
     if @song == []
-
      date_find(date)
     end
+
   end
 
   def view
