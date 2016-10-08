@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
 
     if user
       session[:id] = user.id
+      playlist = Playlist.find_by(user_id: user.id)
+      cookies[:current] = playlist.id
       redirect_to root_path
     else
       render :new

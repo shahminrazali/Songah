@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      Playlist.create(playlist_name: "My First Playlist", user_id: @user.id)
+      playlist = Playlist.create(playlist_name: "My First Playlist", user_id: @user.id)
       redirect_to root_path
     end
   end
