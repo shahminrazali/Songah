@@ -15,7 +15,7 @@ class PlaylistController < ApplicationController
             @playlist_items.each do |a|
               @songs << Song.find(a.song_id)
             end
-
+      set_current(@user_playlist.first.id)
     else
 
       @user_playlist = Playlist.where(user_id: current_user.id)
@@ -25,6 +25,7 @@ class PlaylistController < ApplicationController
       @playlist_items.each do |a|
         @songs << Song.find(a.song_id)
       end
+      set_current(params[:playlist_id])
     end
   end
 
@@ -42,7 +43,7 @@ class PlaylistController < ApplicationController
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.save
-    redirect_to root_path
+    redirect_to playlist_index_path
   end
 
   def switch
@@ -63,8 +64,8 @@ class PlaylistController < ApplicationController
     end
 
 
-    def set_current
-      cookies[:current] = @current.id
+    def set_current(id)
+      cookies[:current] = id
     end
 
 

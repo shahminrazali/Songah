@@ -11,7 +11,7 @@ class AutoController < ApplicationController
       childhood_pl =  Playlist.create(playlist_name: "Childhood", user_id: current_user.id)
       teenage_pl = Playlist.create(playlist_name: "Teenage", user_id: current_user.id)
       adulthood_pl = Playlist.create(playlist_name: "Adulthood", user_id: current_user.id)
-      binding.pry
+
       @childhood = Song.where("date >= :start_date AND date <= :end_date",{start_date: date_range[0], end_date: date_range[1]}).limit(100)
       @teenage = Song.where("date >= :start_date AND date <= :end_date",{start_date: date_range[2], end_date: date_range[3]}).limit(100)
       @adulthood = Song.where("date >= :start_date AND date <= :end_date",{start_date: date_range[4], end_date: date_range[5]}).limit(100)
@@ -28,7 +28,7 @@ class AutoController < ApplicationController
 
       @user_playlist = [childhood_pl , teenage_pl , adulthood_pl]
       @songs = @childhood
-
+      redirect_to playlist_index_path
   end
 
 end

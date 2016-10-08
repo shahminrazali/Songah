@@ -1,43 +1,14 @@
+<div class="users">
+  <div class="page-container">
+    <div class="background-khai">
+      <h1 class="whitefont"> What is your birthdate? </h1>
+
 
 <%=form_for(:song_search, url: search_path, method: :get, html: { id: "item-show-form" }) do |f| %>
   <%= f.date_field :date, id: "date_field", class: 'date', placeholder: "YYYY-MM-DD" %>
   <%= f.submit "Search", class: "btn btn-default button2" %>
 <%end%>
 
-<div class="musicplayer">
-<div class="flexcontainer">
-  <div class="musicplaylist">
-    <div class="smallitem">
-      <h1>Playlists</h1>
-      <hr>
-
-
-
-      <%@user_playlist.each do |p|%>
-            <h2 style="padding:15px">
-        <%=link_to p.playlist_name, playlist_index_path(playlist_id: p.id)%><br>
-              </h2>
-      <%end%>
-
-      <h1 style="padding-top:150px">Create a new playlist</h1>
-    </div>
-  </div>
-
-  <div class="spotify-embeds">
-    <div class="bigitem">
-
-      <%@songs.each do |p|%>
-
-      <%if p.spotify != ""%>
-        <div class="spotify-embed">
-          <iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="340" height="80" frameborder="0" allowtransparency="true"></iframe>
-        </div>
-      <%else%>
-
-      <%end%>
-
-      <%end%>
-    </div>
-  </div>
+</div>
 </div>
 </div>
