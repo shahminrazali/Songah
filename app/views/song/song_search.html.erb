@@ -1,9 +1,21 @@
-<div class ="song">
+<div class="musicplayer">
+<div class="flexcontainer">
+<div class="spotify-embeds">
+  <div class="bigitem">
   <h2>Top songs during that date </h2>
-  <%@song.each do |s| %>
-    <%= s.title %> -
-    <%= s.artist %>
-    <%= button_to "Add To Playlist", playlist_item_index_path(playlist_item: {song_id: s.id}), method: :post, class: "btn btn-default button2" %>
-    <br>
-  <% end %>
+    <%@song.each do |p|%>
+
+    <%if p.spotify != ""%>
+      <div class="spotify-embed">
+        <iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="340" height="80" frameborder="0" allowtransparency="true"></iframe>
+        <%= button_to "Add To Playlist", playlist_item_index_path(playlist_item: {song_id: p.id}), method: :post, class: "btn btn-default button2" %>
+      </div>
+    <%else%>
+
+    <%end%>
+
+    <%end%>
+  </div>
+</div>
+</div>
 </div>

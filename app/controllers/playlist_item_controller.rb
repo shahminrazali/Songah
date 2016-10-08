@@ -2,8 +2,8 @@ class PlaylistItemController < ApplicationController
   before_action :authenticate!, only: [:create, :destroy]
 
   def create
-    @current = get_current
-    @playlist_item = PlaylistItem.create(playlist_items_params.merge(playlist_id: @current.id))
+    @current = cookies[:current]
+    @playlist_item = PlaylistItem.create(playlist_items_params.merge(playlist_id: @current))
   end
 
   def destroy

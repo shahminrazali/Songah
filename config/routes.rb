@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-
   resources :sessions
   resources :playlist
   resources :playlist_item
   resources :song
+  resources :auto
+
+  get :search, to: 'auto#search'
   get :song_search, to: 'song#song_search'
   post :switch, to: 'playlist#switch'
 
@@ -14,6 +15,9 @@ Rails.application.routes.draw do
   get :about, to: 'static_pages#about'
   get :contact, to: 'static_pages#contact'
   get :player, to: "player#index"
+  get :select_playlist, to: "playlist#select_playlist"
+
+
   resources :users, only: [:new, :edit, :create, :update]
   resources :sessions, only: [:new, :create, :destroy]
 

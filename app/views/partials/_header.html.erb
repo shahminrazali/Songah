@@ -6,20 +6,20 @@
 
     <nav>
       <ul>
-        <li ><%= link_to "", song_index_path, class:"fa fa-search" %></li>
-        <li><%= link_to "About", about_path %><li>
-        <li><%= link_to "Contact", contact_path %><li>
-        <li><%= link_to "Player", player_path %><li>
 
         <div class="headerfont">
-        <% if current_user %>
-        <li><%= link_to "My Playlists", playlist_index_path, method: :get%></li>
-          <%= current_user.username %>
-          <li><%= link_to "Logout", session_path(current_user, @current), method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Register", new_user_path %><li>
-          <li><%= link_to "Login" , new_session_path %></li>
-        <% end %>
+          <li ><%= link_to "", auto_index_path, class:"fa fa-magic" %></li>
+          <li ><%= link_to "", song_index_path, class:"fa fa-search" %></li>
+
+          <% if current_user %>
+
+            <li ><%=link_to Playlist.find_by(id: cookies[:current]).playlist_name, playlist_index_path(playlist_id: cookies[:current]), class:"fa fa-bars"%></li>
+            <li><h7><%= current_user.username %><h7><h6><%= link_to "Logout", session_path(current_user, @current), method: :delete %> <h6></li>
+          <% else %>
+            <li><%= link_to "Register", new_user_path %><li>
+            <li><%= link_to "Login" , new_session_path %></li>
+          <% end %>
+
       </div>
       </ul>
     </nav>

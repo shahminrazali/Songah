@@ -1,17 +1,38 @@
-<div class="users">
-  <div class="page-container">
-    <div class="background-khai">
-      <h1 class="whitefont"> Create Playlist </h1>
+<div class="musicplayer">
+<div class="flexcontainer">
+  <div class="musicplaylist">
+    <div class="smallitem">
+      <%= image_tag "playlist.jpg", class: "playlisttitle"%>
+      <hr>
 
-      <%= form_for(:playlist, url: playlist_index_path, method: :post, html: { id: "user-create-form" }) do |f| %>
-        <%= f.text_field :playlist_name, required: true, id: "playlist_name_field", class: 'username', placeholder: "Playlist Name" %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit "Create Playlist", class: "btn btn-default button2" %>
-      <% end %>
 
-      <% @playlists.each do |f|%>
-        <%=link_to f.playlist_name ,switch_path(id: f.id) , method: :post %>
+
+      <%@user_playlist.each do |p|%>
+            <h2>
+        <%=link_to p.playlist_name, playlist_index_path(playlist_id: p.id)%>
+            </h2>
+      <%end%>
+<br>
+
+      <h1><%=link_to "NEW PLAYLIST", new_playlist_path%></h1>
+    </div>
+  </div>
+
+  <div class="spotify-embeds">
+    <div class="bigitem">
+
+      <%@songs.each do |p|%>
+
+      <%if p.spotify != ""%>
+        <div class="spotify-embed">
+          <iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="340" height="80" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+      <%else%>
+
+      <%end%>
+
       <%end%>
     </div>
   </div>
+</div>
 </div>
