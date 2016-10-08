@@ -4,7 +4,15 @@
     <div class="smallitem">
       <h1>Playlists</h1>
       <hr>
-      <h2 style="padding:15px">Playlist A</h2>
+      <h2 style="padding:15px">
+
+
+      <%@user_playlist.each do |p|%>
+          <%=p.playlist_name%><br>
+        <%=p.user_id%><br>
+
+      <%end%>
+      </h2>
       <h2 style="padding:15px">Playlist B</h2>
       <h1 style="padding-top:150px">Create a new playlist</h1>
     </div>
@@ -13,6 +21,15 @@
 
   <div class="spotify-embeds">
     <div class="bigitem">
+
+      <%@songs.each do |p|%>
+      <%if p.spotify != nil %>
+          <div class="spotify-embed"><iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="340" height="80" frameborder="0" allowtransparency="true"></iframe></div>
+          <%=fa_icon "minus 1x"%>
+      <%else%>
+          <%=p.title%><br>
+          <%=p.artist%><br>
+      <%end%>
       <div class="spotify-embed"><iframe src="https://embed.spotify.com/?uri=spotify:user:oosabaj:playlist:2UDe8QqHAXUaLrdb0QsDGE" width="340" height="80" frameborder="0" allowtransparency="true"></iframe></div>
       <div class="spotify-embed"><iframe src="https://embed.spotify.com/?uri=spotify:user:oosabaj:playlist:51vBEL5eVtII7uIEDltWwB" width="340" height="80" frameborder="0" allowtransparency="true"></iframe></div>
       <div class="spotify-embed"><iframe src="https://embed.spotify.com/?uri=spotify:user:dembsky:playlist:7qfcDxieRKE6VOFE3YNKbz" width="340" height="80" frameborder="0" allowtransparency="true"></iframe></div>
@@ -21,3 +38,86 @@
   </div>
 </div>
 </div>
+
+
+<!-- <div class="users">
+  <div class="page-container">
+    <div class="background-khai">
+      <h1 class="whitefont"> Create Playlist </h1>
+
+      <%= form_for(:playlist, url: playlist_index_path, method: :post, html: { id: "user-create-form" }) do |f| %>
+        <%= f.text_field :playlist_name, required: true, id: "playlist_name_field", class: 'username', placeholder: "Playlist Name" %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit "Create Playlist", class: "btn btn-default button2" %>
+      <% end %>
+
+      <% @playlists.each do |f|%>
+        <%=link_to f.playlist_name ,switch_path(id: f.id) , method: :post %>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+<section class="parent1">
+  <div class="child1">
+    Users Playlist listed here
+    <table>
+    <%@user_playlist.each do |p|%>
+    <tr>
+      <td>
+        <%=p.playlist_name%><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <%=p.user_id%><br>
+    </td>
+  </tr>
+    <%end%>
+  </table>
+  </div>
+  <div class="child1">
+    The songs from playlist listed here <br>
+    <table>
+    <%@playlist_items.each do |p|%>
+    <tr>
+      <td>
+        <%=p.song_id%><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <%=p.playlist_id%><br>
+    </td>
+  </tr>
+    <%end%>
+  </table>
+  </div>
+
+</div>
+<div class="child1">
+  The songs from playlist listed here <br>
+  <table>
+  <%@songs.each do |p|%>
+  <tr>
+    <td>
+      Title: <%=p.title%><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Artist: <%=p.artist%><br>
+  </td>
+</tr>
+<tr>
+  <td vertical-align="middle">
+      <iframe src="https://embed.spotify.com/?uri=<%=p.spotify%>" width="700" height="80" frameborder="0" allowtransparency="true"></iframe>
+      <%=fa_icon "minus 1x"%>
+      <i vertical-align="middle" class="fa fa-minus" aria-hidden="true"></i>
+
+</td>
+</tr>
+  <%end%>
+</table>
+</div>
+</section> -->

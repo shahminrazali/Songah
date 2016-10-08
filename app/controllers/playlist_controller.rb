@@ -1,15 +1,37 @@
 class PlaylistController < ApplicationController
 
   def index
-    @playlist = Playlist.new
-    @user_playlist = Playlist.all
-    @playlist_items = PlaylistItem.where(playlist_id: @user_playlist.first.id)
-    @songs = Song.where(id: @playlist_items.each {|p| p.id})
+    # binding.pry
+    if (params[:playlist_id] == nil)
+
+      @playlist = Playlist.new
+      @user_playlist = Playlist.where(user_id: current_user.id)
+      @playlist_items = PlaylistItem.where(playlist_id: @user_playlist.first.id)
+
+      # @songs = Song.where(id: @playlist_items.each {|t| t.song_id})
+
+      @songs = []
+            @playlist_items.each do |a|
+              @songs << Song.find(a.song_id)
+            end
+
+    else
+
+      @user_playlist = Playlist.where(user_id: current_user.id)
+      @playlist_items = PlaylistItem.where(playlist_id: params[:playlist_id])
+      # @songs = Song.where(id: @playlist_items.each {|t| t.song_id})
+      @songs = []
+      @playlist_items.each do |a|
+        @songs << Song.find(a.song_id)
+      end
+    end
   end
 
   def select_playlist
-    @playlist_items = PlaylistItem.where(playlist_id: Playlist.find(params[playlist_id]))
-    @playlists = Playlist.where(user_id: current_user.id)
+
+    # @playlist_items = PlaylistItem.where(playlist_id: params[:playlist_id])
+    # @songs = Song.where(id: @playlist_items.each {|p| p.id})
+    # redirect_to playlist_index_path(playlist_items: @playlist_items, songs: @songs)
   end
 
   def new
