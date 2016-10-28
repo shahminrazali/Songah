@@ -137,6 +137,7 @@ header ul li a{
     -webkit-transition: .1s linear;
 }
 
+
 header ul li a:hover,
 header ul li .current{
     color: yellow;
@@ -278,7 +279,7 @@ header ul li .current{
 .services ul li{
     list-style: none;
     display: block;
-    width: 313px;
+    width: 250px;
     float: left;
     margin-right: 80px;
     text-align: center;
@@ -575,7 +576,7 @@ header ul li .current{
 }
 
 .team ul li{
-    width: 230px;
+    width: 180px;
     list-style: none;
     float: left;
     margin: 0 60px 60px 0;
